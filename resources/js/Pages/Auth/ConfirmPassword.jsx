@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, useForm } from '@inertiajs/react';
+import BotaoPrincipal from '@/Components/BotaoPrincipal';
 
 export default function ConfirmPassword() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -28,7 +28,7 @@ export default function ConfirmPassword() {
             <Head title="Confirm Password" />
 
             <div className="mb-4 text-sm text-gray-600">
-                This is a secure area of the application. Please confirm your password before continuing.
+                Por favor, confirme sua senha!
             </div>
 
             <form onSubmit={submit}>
@@ -49,9 +49,9 @@ export default function ConfirmPassword() {
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Confirm
-                    </PrimaryButton>
+                    <BotaoPrincipal className="ms-4" disabled={processing}>
+                        Confirmar
+                    </BotaoPrincipal>
                 </div>
             </form>
         </GuestLayout>

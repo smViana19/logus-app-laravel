@@ -13,7 +13,13 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                // Adicionando a nova cor roxoPrincipal com o código de cor 533680
+                roxoPrincipal: '#533680',
+                // Adicione mais cores conforme necessário
+                corPrincipal: '#B4ADEA',
             },
         },
     },

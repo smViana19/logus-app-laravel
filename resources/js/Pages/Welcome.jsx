@@ -4,29 +4,29 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
             <Head title="Bem Vindo" />
-            <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-                <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
+            <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center bg-corPrincipal selection:bg-red-500 selection:text-white">
+                <div className="sm:fixed sm:top-0  p-10 text-center">
                     {auth.user ? (
                         <Link
                             href={route('dashboard')}
-                            className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                            className="ms-4 text-lg font-semibold text-neutral-950 hover:text-neutral-500 uppercase"
                         >
-                            Dashboard
+                            Painel
                         </Link>
                     ) : (
                         <>
-                            <Link
+                            {/* <Link
                                 href={route('login')}
-                                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                className="font-semibold text-neutral-950 hover:text-neutral-500  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                             >
                                 Login
-                            </Link>
+                            </Link> */}
 
                             <Link
                                 href={route('register')}
-                                className="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                className="ms-4 text-lg font-semibold text-neutral-950 hover:text-neutral-500 uppercase"
                             >
-                                Registrar
+                                Iniciar Sessão
                             </Link>
                         </>
                     )}

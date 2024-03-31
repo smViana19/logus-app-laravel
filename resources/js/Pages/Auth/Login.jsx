@@ -3,9 +3,10 @@ import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
+import BotaoPrincipal from '@/Components/BotaoPrincipal';
+import Dropdown from '@/Components/Dropdown';
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -13,7 +14,7 @@ export default function Login({ status, canResetPassword }) {
         password: '',
         remember: false,
     });
-
+    
     useEffect(() => {
         return () => {
             reset('password');
@@ -47,7 +48,8 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('email', e.target.value)}
                     />
 
-                    <InputError message={errors.email} className="mt-2" />
+            <InputError message={data.email === '' ? 'O campo email é obrigatorio' : ''} className="mt-2" />
+
                 </div>
 
                 <div className="mt-4">
@@ -63,7 +65,7 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('password', e.target.value)}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+        <InputError message={data.password === '' ? 'O campo senha é obrigatório' : ''} className="mt-2" />
                 </div>
 
                 <div className="block mt-4">
@@ -76,6 +78,7 @@ export default function Login({ status, canResetPassword }) {
                         <span className="ms-2 text-sm text-gray-600">Lembre-me</span>
                     </label>
                 </div>
+                
 
                 <div className="flex items-center justify-end mt-4">
                     {canResetPassword && (
@@ -87,9 +90,9 @@ export default function Login({ status, canResetPassword }) {
                         </Link>
                     )}
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                    <BotaoPrincipal className="ms-4" disabled={processing}>
                         Login
-                    </PrimaryButton>
+                    </BotaoPrincipal>
                 </div>
             </form>
         </GuestLayout>

@@ -2,11 +2,14 @@ import { useEffect } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
+import PrimaryButton from '@/Components/BotaoPrincipal';
 import TextInput from '@/Components/TextInput';
-import { Head, Link, useForm } from '@inertiajs/react';
 
-export default function Register() {
+import { Head, Link, useForm } from '@inertiajs/react';
+import Dropdown from '@/Components/Dropdown';
+
+
+export default function Cadastrar() {
     const { data, setData, post, processing, errors, reset } = useForm({
         name: '',
         email: '',
@@ -28,11 +31,11 @@ export default function Register() {
 
     return (
         <GuestLayout>
-            <Head title="Registrar" />
+            <Head title="Cadastrar" />
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="name" value="Nome" />
 
                     <TextInput
                         id="name"
@@ -66,7 +69,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Senha" />
 
                     <TextInput
                         id="password"
@@ -83,7 +86,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
+                    <InputLabel htmlFor="password_confirmation" value="Confirmar senha" />
 
                     <TextInput
                         id="password_confirmation"
@@ -97,9 +100,10 @@ export default function Register() {
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />
+                    
                 </div>
+                <div className="flex items-center justify-end mt-10">
 
-                <div className="flex items-center justify-end mt-4">
                     <Link
                         href={route('login')}
                         className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -110,7 +114,9 @@ export default function Register() {
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Registrar
                     </PrimaryButton>
+
                 </div>
+
             </form>
         </GuestLayout>
     );
