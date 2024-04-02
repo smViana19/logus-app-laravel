@@ -85,7 +85,7 @@ export default function Cadastrar() {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-4 ">
                     <InputLabel htmlFor="password_confirmation" value="Confirmar senha" />
 
                     <TextInput
@@ -102,17 +102,21 @@ export default function Cadastrar() {
                     <InputError message={errors.password_confirmation} className="mt-2" />
                     
                 </div>
-                <div className="flex items-center justify-end mt-10">
-
-                    <Link
+                <div className="flex justify-center mt-5">
+                
+                <Link
                         href={route('login')}
-                        className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className=" text-sm text-gray-500 hover:text-gray-900"
                     >
-                        Já tem uma conta?
+                        Ja possui uma conta? <span className='font-bold text-roxoPrincipal hover:underline'>Entrar</span>
                     </Link>
+                </div>
+                <div className="flex items-center justify-center mt-5">
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Registrar
+                   
+
+                    <PrimaryButton disabled={processing}>
+                        Cadastrar
                     </PrimaryButton>
 
                 </div>

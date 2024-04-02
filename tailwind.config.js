@@ -17,9 +17,10 @@ export default {
             },
             colors: {
                 // Adicionando a nova cor roxoPrincipal com o código de cor 533680
-                roxoPrincipal: '#533680',
+                roxoPrincipal: '#5A1B8D',
                 // Adicione mais cores conforme necessário
                 corPrincipal: '#B4ADEA',
+                corFundo: '#820AD1',
             },
         },
     },
