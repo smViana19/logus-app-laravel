@@ -14,7 +14,7 @@ export default function Login({ status, canResetPassword }) {
         password: '',
         remember: false,
     });
-    
+
     useEffect(() => {
         return () => {
             reset('password');
@@ -48,7 +48,7 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('email', e.target.value)}
                     />
 
-            <InputError message={data.email === '' ? 'O campo email é obrigatorio' : ''} className="mt-2" />
+                    <InputError message={data.email === '' ? 'O campo email é obrigatorio' : ''} className="mt-2" />
 
                 </div>
 
@@ -65,7 +65,7 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('password', e.target.value)}
                     />
 
-        <InputError message={data.password === '' ? 'O campo senha é obrigatório' : ''} className="mt-2" />
+                    <InputError message={data.password === '' ? 'O campo senha é obrigatório' : ''} className="mt-2" />
                 </div>
 
                 <div className="block mt-4">
@@ -77,20 +77,20 @@ export default function Login({ status, canResetPassword }) {
                         />
                         <span className="ms-2 text-sm text-gray-600">Lembre-me</span>
                     </label>
-                </div>
-                
-
-                <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
+                    <div className=" text-sm text-gray-600 mt-2">
+                        {canResetPassword && (
                         <Link
                             href={route('password.request')}
                             className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             Esqueceu sua senha?
                         </Link>
-                    )}
+                    )}</div>
+                </div>
 
-                    <BotaoPrincipal className="ms-4" disabled={processing}>
+
+                <div className="flex justify-center mt-5">
+                    <BotaoPrincipal className="" disabled={processing}>
                         Login
                     </BotaoPrincipal>
                 </div>

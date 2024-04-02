@@ -24,10 +24,13 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                             <Link
                                 href={route('register')}
-                                className="ms-4 text-lg font-semibold text-neutral-950 hover:text-neutral-500 uppercase"
-                            >
+                                className="ms-4 text-lg font-medium text-neutral-950 hover:text-neutral-600 ">
                                 Iniciar Sessão
                             </Link>
+                            <Link className="ms-4 text-lg font-medium text-neutral-950 hover:text-neutral-600 ">Funcionalidades</Link>
+                            <Link className="ms-4 text-lg font-medium text-neutral-950 hover:text-neutral-600 ">Planos</Link>
+                            <Link className="ms-4 text-lg font-medium text-neutral-950 hover:text-neutral-600 ">Obtenha o lógus grátis</Link>
+
                         </>
                     )}
                 </div>

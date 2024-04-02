@@ -28,7 +28,7 @@ export default function ResetPassword({ token, email }) {
 
     return (
         <GuestLayout>
-            <Head title="Reset Password" />
+            <Head title="Resetar senha" />
 
             <form onSubmit={submit}>
                 <div>
@@ -81,7 +81,7 @@ export default function ResetPassword({ token, email }) {
 
                 <div className="flex items-center justify-end mt-4">
                     <PrimaryButton className="ms-4" disabled={processing}>
-                        Reset Password
+                        Resetar senha
                     </PrimaryButton>
                 </div>
             </form>
