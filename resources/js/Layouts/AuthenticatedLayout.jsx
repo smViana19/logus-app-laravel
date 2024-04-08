@@ -24,6 +24,11 @@ export default function Authenticated({ user, header, children }) {
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Tela Principal
                                 </NavLink>
+                               
+                               
+                                <NavLink href={route('dashboard')} active={route().current('dashboard')}>
+                                    Agenda
+                                </NavLink>
                             </div>
 
                         </div>
