@@ -32,6 +32,35 @@
 }
 
 
+.container__funcionalidades-grid {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  gap: 10%;
+  justify-content: center;
+}
+.onhover {
+  border-left: 6px solid #820AD1;
+  border-radius: 8px;
+  box-shadow: 16px 16px 16px 8px rgba(179, 178, 178, 0.133);
+}
+
+/* SECTION PLANOS*/
+.card-planos{
+  border-radius: 16px;
+  box-shadow: 16px 16px 16px 8px rgba(195, 194, 194, 0.104);
+  padding: 16px;
+  border: 2px solid rgba(167, 167, 167, 0.11);
+}
+.custum__btn-planos{
+  width: 100%;
+  padding: 12px 0;
+  background-color: #E5F4F2;
+  color: #009379;
+  border-radius: 16px;
+  margin-top: 24px;
+}
+
+
 /* -------------------------- COMPONENTS ----------------------------------- */
 
 /* -- InputPurple Component -- */

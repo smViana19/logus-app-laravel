@@ -1,5 +1,6 @@
 import '../../css/Welcome.css'
-export default function InputPurple({typeInput, placeholderInput, typeBtn, valueBtn}) {
+export default function InputPurple({typeInput, placeholderInput, typeBtn, valueBtn,
+                                    btnBgColor, btnTextColor, inputBorder}) {
     return(
       
         <div class="input-group">
@@ -8,11 +9,22 @@ export default function InputPurple({typeInput, placeholderInput, typeBtn, value
             placeholder={placeholderInput}
             class="input"
             id="Email" name="Email"
-            autocomplete="off" />
+            autocomplete="off"
+            style={{
+                border: inputBorder,
+                //não consegui mudar a cor do placeholder
+            }}
+            
+            />
         <input
             typeBtn={typeBtn}
             value={valueBtn}
-            class="button--submit" 
+            class="button--submit"
+            style={{
+                backgroundColor: btnBgColor,
+                color: btnTextColor,
+
+                }} 
 
 
             
