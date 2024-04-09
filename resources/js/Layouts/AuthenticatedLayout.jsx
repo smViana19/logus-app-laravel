@@ -4,6 +4,9 @@ import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
+import InputSearch from '@/Components/InputSearch';
+import BtnCriarDoc from '@/Components/BtnCriarDoc';
+import GridResumos from '@/Components/GridResumos';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -16,6 +19,8 @@ export default function Authenticated({ user, header, children }) {
             <nav className="bg-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
+
+
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
                                 <Link href="/">
@@ -24,14 +29,19 @@ export default function Authenticated({ user, header, children }) {
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink 
+                                <NavLink
                                     borderPage={currentRoute === '/' ? '1px solid black' : 'none'}
                                     href={route('dashboard')} active={route().current('dashboard')}>
-                                    Tela Principal
+                                    Dashboard
                                 </NavLink>
-                               
-                               
-                                <NavLink 
+
+                                <NavLink
+                                    borderPage={currentRoute === '/agenda' ? '1px solid black' : 'none'}
+                                    href={route('agenda')} active={route().current('agenda')}>
+                                    Criar {/* fazer dropdown - resumo slide etc */}
+                                </NavLink>
+
+                                <NavLink
                                     borderPage={currentRoute === '/agenda' ? '1px solid black' : 'none'}
                                     href={route('agenda')} active={route().current('agenda')}>
                                     Agenda
@@ -39,6 +49,7 @@ export default function Authenticated({ user, header, children }) {
                             </div>
 
                         </div>
+
                         {/* Dropdown para sair da conta */}
                         <div className="hidden sm:flex sm:items-center sm:ms-6">
                             <div className="ms-3 relative">
@@ -78,14 +89,34 @@ export default function Authenticated({ user, header, children }) {
                             </div>
                         </div>
 
-                        {/* Restante do código omitido para brevidade */}
                     </div>
+
+                </div>
+            </nav>
+    {/* -------------------------------------------------------------------------- */}
+            <main> {/* não sei se fica aqui, qlqr coisa a gnt muda*/}
+                <div className='custum__div-baner h-64 py-8' >
+                    <InputSearch />
+                    <p className='
+                        text-center 
+                        mt-16 
+                        text-xl 
+                        font-medium
+                        text-gray-700'>Crie seu próprio material de estudos</p>
+                    <BtnCriarDoc />
                 </div>
 
-                {/* Restante do código omitido para brevidade */}
-            </nav>
+                <div className='mx-16'>
+                    <h3 className='w-100 pb-2 mt-16
+                    text-gray-700 text-lg font-medium
+                    border-b-2 border-gray-300'>Recomendados para você: </h3>
+                    
+                    <GridResumos></GridResumos>
 
-            {/* Restante do código omitido para brevidade */}
+                </div>
+            </main>
+
+
         </div>
     );
 }

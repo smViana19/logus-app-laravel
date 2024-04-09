@@ -43,12 +43,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </div>
 
                                     <div>
-                                        {/* <Link
+                                         <Link
                                             href={route('dashboard')}
                                             className="ms-4 font-medium text-white  hover:text-neutral-500" >
                                             Entrar
                                         </Link>
-
+{/*
                                         <Link
                                             href={route('dashboard')}
                                             className="font-medium text-white  hover:text-neutral-500"
