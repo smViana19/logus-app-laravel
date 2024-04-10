@@ -7,6 +7,7 @@ import { Link } from '@inertiajs/react';
 import InputSearch from '@/Components/InputSearch';
 import BtnCriarDoc from '@/Components/BtnCriarDoc';
 import GridResumos from '@/Components/GridResumos';
+import Filtros from '@/Components/Filtros';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -105,6 +106,8 @@ export default function Authenticated({ user, header, children }) {
                         text-gray-700'>Crie seu próprio material de estudos</p>
                     <BtnCriarDoc />
                 </div>
+
+                <Filtros />                
 
                 <div className='mx-16'>
                     <h3 className='w-100 pb-2 mt-16
