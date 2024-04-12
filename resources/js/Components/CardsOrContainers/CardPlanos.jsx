@@ -1,4 +1,4 @@
-import '../../css/Welcome.css'
+import '../../../css/Welcome.css'
 
 export default function CardPlanos({ namePlan, preco, paraQuem, funcionalidade1, funcionalidade2, funcionalidade3, 
                                     backgroundColor, color, buttonBackgroundColor, buttonColor, btnBorder }) {

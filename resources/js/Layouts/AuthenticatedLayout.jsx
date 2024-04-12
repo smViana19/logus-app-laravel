@@ -6,8 +6,8 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 import InputSearch from '@/Components/Inputs/InputSearch';
 import BtnCriarDoc from '@/Components/Buttons/BtnCriarDoc';
-import GridResumos from '@/Components/GridResumos';
 import Filtros from '@/Components/Filtros';
+import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -94,8 +94,8 @@ export default function Authenticated({ user, header, children }) {
 
                 </div>
             </nav>
-    {/* -------------------------------------------------------------------------- */}
-            <main> 
+            {/* -------------------------------------------------------------------------- */}
+            <main>
                 <div className='custum__div-baner h-64 py-8' >
                     <InputSearch />
                     <p className='
@@ -112,14 +112,51 @@ export default function Authenticated({ user, header, children }) {
                     </div>
                 </div>
 
-                <Filtros />                
+                <Filtros />
 
                 <div className='mx-16'>
                     <h3 className='w-100 pb-2 mt-16
                     text-gray-700 text-lg font-medium
                     border-b-2 border-gray-300'>Recomendados para você: </h3>
-                    
-                    <GridResumos></GridResumos>
+
+                    <div className='grid grid-cols-4 my-8 gap-4'>
+                        <CardMaterial
+                            materia={'Matemática'}
+                            data={'12/04/24'}
+                            anoEscolar={'1º Ano do Ensino Médio'}
+                            titulo={'Área e volume de Poligonos e Piramides'}
+                            colorSVG={'red'}
+
+                        />
+
+                        <CardMaterial
+                            materia={'Português'}
+                            data={'12/04/24'}
+                            titulo={'Preposições'}
+                            colorSVG={'blue'}
+
+                        />
+
+                        <CardMaterial
+                            materia={'Biologia'}
+                            anoEscolar={'1º Ano do Ensino Médio'}
+                            data={'12/04/24'}
+                            titulo={'Fungos e bactérias'}
+                            colorSVG={'green'}
+
+                        />
+
+                        <CardMaterial
+                            materia={'Matemática'}
+                            data={'12/04/24'}
+                            titulo={'Área e volume de Poligonos e Piramides'}
+                            colorSVG={'red'}
+
+                        />
+
+
+                    </div>
+
 
                 </div>
             </main>

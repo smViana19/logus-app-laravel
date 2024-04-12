@@ -1,4 +1,4 @@
-import '../../css/Dashboard.css'
+import '../../../css/Dashboard.css'
 
 export default function InputSearch() {
     return(
