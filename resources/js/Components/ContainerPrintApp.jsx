@@ -1,5 +1,7 @@
 import '../../css/Welcome.css'
 
+
+
 export default function ContainerPrintApp() {
     return (
        <div className="rounded-md custum__container-print">

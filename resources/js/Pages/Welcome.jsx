@@ -1,11 +1,15 @@
 import { Link, Head } from '@inertiajs/react';
 import '../../css/Welcome.css'
 import ContainerPrintApp from '@/Components/ContainerPrintApp';
-import Subtitle from '@/Components/Subtitle';
-import InputPurple from '@/Components/InputPurple';
-import CardTitle from '@/Components/CardTitle';
-import CardPlanos from '@/Components/CardPlanos';
+import Subtitle from '@/Components/Text/Subtitle';
+import InputPurple from '../Components/Inputs/InputPurple';
+import CardTitle from '@/Components/CardsOrContainers/CardTitle';
+import CardPlanos from '@/Components/CardsOrContainers/CardPlanos';
 import ApplicationLogo from '@/Components/ApplicationLogo';
+import imgAppStore from '../../img/installAppStore.png';
+import imgGooglePlay from '../../img/installGooglePlay.png';
+import imgMockupMobile from '../../img/mockup-home-mobile.png'
+import CardFuncionalidades from '@/Components/CardsOrContainers/CardFuncionalidades';
 
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
@@ -43,12 +47,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </div>
 
                                     <div>
-                                         <Link
+                                        <Link
                                             href={route('dashboard')}
                                             className="ms-4 font-medium text-white  hover:text-neutral-500" >
                                             Entrar
                                         </Link>
-{/*
+                                        {/*
                                         <Link
                                             href={route('dashboard')}
                                             className="font-medium text-white  hover:text-neutral-500"
@@ -84,7 +88,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                                             <div className='flex justify-around mt-8'>
                                                 <imgAndroid className='testeImg' />
-                                                <a href=""><img src="../img/installAppStore.png" alt="Link para baixar o aplicativo IOS" /></a>
+                                                <a href=""><img src="" alt="Link para baixar o aplicativo IOS" /></a>
                                             </div>
 
                                         </div>
@@ -245,19 +249,19 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                                         <ContainerPrintApp></ContainerPrintApp>
 
-                                        <section className='container__app-mobile mt-32' >
-                                            <div>
-                                                <Subtitle>Baixe também nosso aplicativo mobile</Subtitle>
+                                        <section className='container__app-mobile mt-16' >
+                                            <div className='mt-40'>
+                                                <Subtitle >Baixe também nosso aplicativo mobile</Subtitle>
                                                 <p className='mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, facere autem veritatis pariatur, minus est fugit molestiae quisquam perferendis, temporibus optio possimus aliquam qui illo! Minima libero et magnam odio?</p>
 
-                                                <div className='flex justify-around mt-8'>
-                                                    <a href=""><img src="../../img/installGooglePlay.png" alt="Link para baixar o aplicativo android" /></a>
-                                                    <a href=""><img src="../img/installAppStore.png" alt="Link para baixar o aplicativo IOS" /></a>
+                                                <div className='flex justify-left gap-32 mt-16'>
+                                                    <a href=""><img className='w-32' src={imgGooglePlay} alt="Link para baixar o aplicativo android" /></a>
+                                                    <a href=""><img className='w-32' src={imgAppStore} alt="Link para baixar o aplicativo IOS" /></a>
                                                 </div>
 
                                             </div>
 
-                                            <img src="../../../img/mockp-home-mobile" alt="" />
+                                            <img className='w-3/4' src={imgMockupMobile} alt="" />
                                         </section>
 
 
@@ -270,20 +274,23 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                                             <div className='container__funcionalidades-grid'>
                                                 <div>
+                                                    <CardFuncionalidades
+                                                        title={'Postagem de Materiais'}
+                                                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam quia ullam deserunt laboriosam velit voluptate, ut vero rerum cum ipsa aliquam totam consequatur obcaecati aspernatur aperiam facere blanditiis, repellat aliquid'}
 
-                                                    <div className='card-funcionalidades onhover px-4 py-2 mb-8'>
-                                                        <CardTitle>Compartilhe resumos</CardTitle>
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam quia ullam deserunt laboriosam velit voluptate, ut vero rerum cum ipsa aliquam totam consequatur obcaecati aspernatur aperiam facere blanditiis, repellat aliquid.</p>
-                                                    </div>
+                                                    />
 
-                                                    <div className='card-funcionalidades px-4 py-2 mb-8'>
-                                                        <CardTitle>Agenda</CardTitle>
-                                                        <p className='opacity-0'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam quia ullam deserunt laboriosam velit voluptate, ut vero rerum cum ipsa aliquam totam consequatur obcaecati aspernatur aperiam facere blanditiis, repellat aliquid.</p>
-                                                    </div>
-                                                    <div className='card-funcionalidades px-4 py-2 mb-8'>
-                                                        <CardTitle>Método Pomodoro</CardTitle>
-                                                        <p className='opacity-0'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam quia ullam deserunt laboriosam velit voluptate, ut vero rerum cum ipsa aliquam totam consequatur obcaecati aspernatur aperiam facere blanditiis, repellat aliquid.</p>
-                                                    </div>
+                                                    <CardFuncionalidades
+                                                        title={'Agenda'}
+                                                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam quia ullam deserunt laboriosam velit voluptate, ut vero rerum cum ipsa aliquam totam consequatur obcaecati aspernatur aperiam facere blanditiis, repellat aliquid'}
+
+                                                    />
+
+                                                    <CardFuncionalidades
+                                                        title={'Método Pomodoro'}
+                                                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam quia ullam deserunt laboriosam velit voluptate, ut vero rerum cum ipsa aliquam totam consequatur obcaecati aspernatur aperiam facere blanditiis, repellat aliquid'}
+
+                                                    />
 
                                                 </div>
 
@@ -301,8 +308,8 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                                     namePlan={'Free'}
                                                     preco={'R$ 0'}
                                                     paraQuem={'ldsfasdfasdfasdfasdfasdLorem ipsum dolor sit amet, consectetur adipiscing elit. '}
-                                                    funcionalidade1={'primeira funcionalidade'}
-                                                    funcionalidade2={'segunda funcionalidade'}
+                                                    funcionalidade1={'Número ilimitado de postagens e downloads'}
+                                                    funcionalidade2={'Sem anúncios'}
                                                     funcionalidade3={'terceira funcionalidade'}
                                                 />
                                                 <CardPlanos
@@ -314,16 +321,16 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                                     namePlan={'Premium'}
                                                     preco={'R$ 9,90'}
                                                     paraQuem={'O plano perfeito para estudantes que querem experimentar ao máximo seus estudos'}
-                                                    funcionalidade1={'primeira funcionalidade'}
-                                                    funcionalidade2={'segunda funcionalidade'}
+                                                    funcionalidade1={'Número ilimitado de postagens e downloads'}
+                                                    funcionalidade2={'Sem anúncios'}
                                                     funcionalidade3={'terceira funcionalidade'}
                                                 />
                                                 <CardPlanos
                                                     namePlan={'Empresarial'}
                                                     preco={'R$ 120,00'}
                                                     paraQuem={'O plano ideial para empresas, principalmente escolas e facultades, de médio e grande porte'}
-                                                    funcionalidade1={'primeira funcionalidade'}
-                                                    funcionalidade2={'segunda funcionalidade'}
+                                                    funcionalidade1={'Número ilimitado de postagens e downloads'}
+                                                    funcionalidade2={'Sem anúncios'}
                                                     funcionalidade3={'terceira funcionalidade'}
                                                 />
                                             </div>

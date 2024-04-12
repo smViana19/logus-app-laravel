@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
-import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import TextInput from '@/Components/TextInput';
+import InputError from '@/Components/Inputs/InputError';
+import InputLabel from '@/Components/Inputs/InputLabel';
+import TextInput from '@/Components/Inputs/TextInput';
 import { Head, useForm } from '@inertiajs/react';
-import BotaoPrincipal from '@/Components/BotaoPrincipal';
+import BotaoPrincipal from '@/Components/Buttons/BotaoPrincipal';
 
 export default function ConfirmPassword() {
     const { data, setData, post, processing, errors, reset } = useForm({

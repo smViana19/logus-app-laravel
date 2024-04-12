@@ -4,8 +4,8 @@ import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
-import InputSearch from '@/Components/InputSearch';
-import BtnCriarDoc from '@/Components/BtnCriarDoc';
+import InputSearch from '@/Components/Inputs/InputSearch';
+import BtnCriarDoc from '@/Components/Buttons/BtnCriarDoc';
 import GridResumos from '@/Components/GridResumos';
 import Filtros from '@/Components/Filtros';
 
@@ -95,7 +95,7 @@ export default function Authenticated({ user, header, children }) {
                 </div>
             </nav>
     {/* -------------------------------------------------------------------------- */}
-            <main> {/* não sei se fica aqui, qlqr coisa a gnt muda*/}
+            <main> 
                 <div className='custum__div-baner h-64 py-8' >
                     <InputSearch />
                     <p className='
@@ -105,6 +105,11 @@ export default function Authenticated({ user, header, children }) {
                         font-medium
                         text-gray-700'>Crie seu próprio material de estudos</p>
                     <BtnCriarDoc />
+                    <div className='bg-gray-300 flex justify-between mt-16'>
+                        <p className='font-medium px-4 py-2 mx-4 my-2'>Experimente o plano perfeito para você</p>
+                        <button className='font-medium px-4 py-2 mx-4 my-2 rounded-lg bg-gray-400'>Experimentar</button>
+
+                    </div>
                 </div>
 
                 <Filtros />                

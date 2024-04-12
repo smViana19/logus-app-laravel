@@ -1,9 +1,9 @@
 import { useEffect, FormEventHandler } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
-import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/BotaoPrincipal';
-import TextInput from '@/Components/TextInput';
+import InputError from '@/Components/Inputs/InputError';
+import InputLabel from '@/Components/Inputs/InputLabel';
+import PrimaryButton from '@/Components/Buttons/BotaoPrincipal';
+import TextInput from '@/Components/Inputs/TextInput';
 import { Head, useForm } from '@inertiajs/react';
 
 export default function ResetPassword({ token, email }: { token: string, email: string }) {

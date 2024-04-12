@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
-import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import TextInput from '@/Components/TextInput';
+import InputError from '@/Components/Inputs/InputError';
+import InputLabel from '@/Components/Inputs/InputLabel';
+import TextInput from '@/Components/Inputs/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
-import BotaoPrincipal from '@/Components/BotaoPrincipal';
+import BotaoPrincipal from '@/Components/Buttons/BotaoPrincipal';
 import Dropdown from '@/Components/Dropdown';
 
 export default function Login({ status, canResetPassword }) {

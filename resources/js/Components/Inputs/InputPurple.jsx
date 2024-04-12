@@ -1,5 +1,5 @@
-import '../../css/Welcome.css'
-export default function InputPurple({typeInput, placeholderInput, typeBtn, valueBtn,
+import '../../../css/Welcome.css'
+function InputPurple({typeInput, placeholderInput, typeBtn, valueBtn,
                                     btnBgColor, btnTextColor, inputBorder}) {
     return(
       
@@ -32,3 +32,5 @@ export default function InputPurple({typeInput, placeholderInput, typeBtn, value
     </div>  
     )
 }
+
+export default InputPurple;

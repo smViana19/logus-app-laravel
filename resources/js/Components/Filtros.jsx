@@ -1,16 +1,15 @@
 export default function Filtros() {
     return(
         <div className="flex justify-left mt-32 mx-16">
-            <div className="my-22">
                 <select name="" id="" className="rounded-lg mx-2 border-2 border-gray-200">
                     <option value="" disabled selected>Ordenar por: </option>
                     <option value="">Populares</option>
                     <option value="">Recentes</option>
                 </select>
-            </div>
+        
 
             <select name="" id="" className="rounded-lg mx-4 border-2 border-gray-200" >
-                <option value="" disabled selected >Ano Escolar</option>
+                <option value="" disabled selected >Escolaridade</option>
                 <option value="">Ensino Fundamental I</option>
                 <option value="">Ensino Fundamental II</option>
                 <option value="">Ensino Médio</option>

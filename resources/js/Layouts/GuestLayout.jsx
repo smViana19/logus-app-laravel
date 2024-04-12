@@ -1,6 +1,6 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import { Link } from '@inertiajs/react';
-import TituloH1 from '@/Components/TituloCadastro';
+import TituloH1 from '@/Components/Text/TituloCadastro';
 
 export default function Guest({ children }) {
     return (
