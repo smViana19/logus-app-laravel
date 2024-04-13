@@ -98,69 +98,8 @@ export default function Authenticated({ user, header, children }) {
             </nav>
             {/* -------------------------------------------------------------------------- */}
             <main>
-                <div className='custum__div-baner h-64 py-8' >
-                    <InputSearch />
-                    <p className='
-                        text-center 
-                        mt-16 
-                        text-xl 
-                        font-medium
-                        text-gray-700'>Crie seu próprio material de estudos</p>
-                    <BtnCriarDoc />
-                    <div className='bg-gray-300 flex justify-between mt-16'>
-                        <p className='font-medium px-4 py-2 mx-4 my-2'>Experimente o plano perfeito para você</p>
-                        <button className='font-medium px-4 py-2 mx-4 my-2 rounded-lg bg-gray-400'>Experimentar</button>
-
-                    </div>
-                </div>
-
-                <Filtros />
-
-                <div className='mx-16'>
-                    <h3 className='w-100 pb-2 mt-16
-                    text-gray-700 text-lg font-medium
-                    border-b-2 border-gray-300'>Da sua turma: </h3>
-
-                    <div className='grid grid-cols-4 my-8 gap-4'>
-                        <CardMaterial
-                            materia={'Matemática'}
-                            data={'12/04/24'}
-                            anoEscolar={'1º Ano do Ensino Médio'}
-                            titulo={'Área e volume de Poligonos e Piramides'}
-                            colorSVG={'red'}
-
-                        />
-
-                        <CardMaterial
-                            materia={'Português'}
-                            data={'12/04/24'}
-                            titulo={'Preposições'}
-                            colorSVG={'blue'}
-
-                        />
-
-                        <CardMaterial
-                            materia={'Biologia'}
-                            anoEscolar={'1º Ano do Ensino Médio'}
-                            data={'12/04/24'}
-                            titulo={'Fungos e bactérias'}
-                            colorSVG={'green'}
-
-                        />
-
-                        <CardMaterial
-                            materia={'Matemática'}
-                            data={'12/04/24'}
-                            titulo={'Área e volume de Poligonos e Piramides'}
-                            colorSVG={'red'}
-
-                        />
-
-
-                    </div>
-
-
-                </div>
+                
+               
             </main>
 
 

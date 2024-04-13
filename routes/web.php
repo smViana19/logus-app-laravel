@@ -32,6 +32,13 @@ Route::get('/dashboard/agenda', function () {
 })->middleware(['auth', 'verified'])->name('agenda');
 
 
+//rota da agenda
+Route::get('/posts', function () {
+    return Inertia::render('Posts');
+})->middleware(['auth', 'verified'])->name('posts');
+
+
+
 
 
 

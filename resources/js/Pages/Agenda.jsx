@@ -1,7 +1,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 
-export default function Welcome({ auth, laravelVersion, phpVersion }) {
+export default function Agenda({ auth, laravelVersion, phpVersion }) {
     return (
         <AuthenticatedLayout
             user={auth.user}
