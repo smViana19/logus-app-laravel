@@ -97,8 +97,12 @@ export default function Authenticated({ user, header, children }) {
                 </div>
             </nav>
             {/* -------------------------------------------------------------------------- */}
-            <main>
-                
+            <main className='w-11/12 bg-gray-200'>
+                <div className='flex justify-around'>
+                    <h1 className='font-base text-lg my-2 border-gray-800 border-2 py-2 px-4 rounded-md'>Área do Aluno</h1>
+                    <h1 className='font-base text-lg my-2 border-gray-800 border-2 py-2 px-4 rounded-md'>Área do Professor</h1>
+
+                </div>
                
             </main>
 
