@@ -4,7 +4,6 @@ import ContainerPrintApp from '@/Components/ContainerPrintApp';
 import Subtitle from '@/Components/Text/Subtitle';
 import InputPurple from '../Components/Inputs/InputPurple';
 import CardTitle from '@/Components/CardsOrContainers/CardTitle';
-import CardPlanos from '@/Components/CardsOrContainers/CardPlanos';
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import imgAppStore from '../../img/installAppStore.png';
 import imgGooglePlay from '../../img/installGooglePlay.png';
@@ -37,11 +36,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                             className="ms-4 font-medium text-white  hover:text-neutral-500 uppercase border-link" >
                                             Funcionalidades
                                         </Link>
-                                        <Link href='#planos'
-                                            className="ms-4 font-medium text-white text-base  hover:text-neutral-500 uppercase" >
-                                            Planos
-                                        </Link>
-
 
                                     </div>
 
@@ -90,9 +84,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         <img className='w-3/4' src={imgMockupMobile} alt="" />
                                     </section>
 
-
-
-                                    <section id='funcionalidades' className='mt-32 w-3/4 m-auto' >
+                                    <section id='funcionalidades' className='my-32  w-3/4 m-auto' >
                                         <Subtitle centered>
                                             FUNCIONALIDADES
                                         </Subtitle>
@@ -126,41 +118,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </div>
                                     </section>
 
-                                    <section id='planos' className='mb-32'>
-                                        <Subtitle centered>PLANOS</Subtitle>
-                                        <p className='text-center mb-24'>Escolha o plano perfeito para você</p>
-                                        <div className='grid grid-cols-3 w-4/5 m-auto gap-10'>
-                                            <CardPlanos
-                                                namePlan={'Free'}
-                                                preco={'R$ 0'}
-                                                paraQuem={'ldsfasdfasdfasdfasdfasdLorem ipsum dolor sit amet, consectetur adipiscing elit. '}
-                                                funcionalidade1={'Número ilimitado de postagens e downloads'}
-                                                funcionalidade2={'Sem anúncios'}
-                                                funcionalidade3={'terceira funcionalidade'}
-                                            />
-                                            <CardPlanos
-                                                backgroundColor="#820AD1"
-                                                color='white'
-                                                buttonBackgroundColor='white'
-                                                buttonColor='#009379'
-                                                btnBorder='1px solid #009379'
-                                                namePlan={'Premium'}
-                                                preco={'R$ 9,90'}
-                                                paraQuem={'O plano perfeito para estudantes que querem experimentar ao máximo seus estudos'}
-                                                funcionalidade1={'Número ilimitado de postagens e downloads'}
-                                                funcionalidade2={'Sem anúncios'}
-                                                funcionalidade3={'terceira funcionalidade'}
-                                            />
-                                            <CardPlanos
-                                                namePlan={'Empresarial'}
-                                                preco={'R$ 120,00'}
-                                                paraQuem={'O plano ideial para empresas, principalmente escolas e facultades, de médio e grande porte'}
-                                                funcionalidade1={'Número ilimitado de postagens e downloads'}
-                                                funcionalidade2={'Sem anúncios'}
-                                                funcionalidade3={'terceira funcionalidade'}
-                                            />
-                                        </div>
-                                    </section>
+                                   
                                 </main>
                                 <footer >
                                     <div className='bg-[#820AD1] py-4'>
@@ -208,12 +166,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                                 className="ms-4 font-medium text-white  hover:text-neutral-500 uppercase border-link" >
                                                 Funcionalidades
                                             </Link>
-                                            <Link href='#planos'
-                                                className="ms-4 font-medium text-white text-base  hover:text-neutral-500 uppercase" >
-                                                Planos
-                                            </Link>
-
-
+                            
                                         </div>
 
                                         <div>
@@ -261,9 +214,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                             <img className='w-3/4' src={imgMockupMobile} alt="" />
                                         </section>
 
-
-
-                                        <section id='funcionalidades' className='mt-32 w-3/4 m-auto' >
+                                        <section id='funcionalidades' className='my-32 w-3/4 m-auto' >
                                             <Subtitle centered>
                                                 FUNCIONALIDADES
                                             </Subtitle>
@@ -297,41 +248,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                             </div>
                                         </section>
 
-                                        <section id='planos' className='mb-32'>
-                                            <Subtitle centered>PLANOS</Subtitle>
-                                            <p className='text-center mb-24'>Escolha o plano perfeito para você</p>
-                                            <div className='grid grid-cols-3 w-4/5 m-auto gap-10'>
-                                                <CardPlanos
-                                                    namePlan={'Free'}
-                                                    preco={'R$ 0'}
-                                                    paraQuem={'ldsfasdfasdfasdfasdfasdLorem ipsum dolor sit amet, consectetur adipiscing elit. '}
-                                                    funcionalidade1={'Número ilimitado de postagens e downloads'}
-                                                    funcionalidade2={'Sem anúncios'}
-                                                    funcionalidade3={'terceira funcionalidade'}
-                                                />
-                                                <CardPlanos
-                                                    backgroundColor="#820AD1"
-                                                    color='white'
-                                                    buttonBackgroundColor='white'
-                                                    buttonColor='#009379'
-                                                    btnBorder='1px solid #009379'
-                                                    namePlan={'Premium'}
-                                                    preco={'R$ 9,90'}
-                                                    paraQuem={'O plano perfeito para estudantes que querem experimentar ao máximo seus estudos'}
-                                                    funcionalidade1={'Número ilimitado de postagens e downloads'}
-                                                    funcionalidade2={'Sem anúncios'}
-                                                    funcionalidade3={'terceira funcionalidade'}
-                                                />
-                                                <CardPlanos
-                                                    namePlan={'Empresarial'}
-                                                    preco={'R$ 120,00'}
-                                                    paraQuem={'O plano ideial para empresas, principalmente escolas e facultades, de médio e grande porte'}
-                                                    funcionalidade1={'Número ilimitado de postagens e downloads'}
-                                                    funcionalidade2={'Sem anúncios'}
-                                                    funcionalidade3={'terceira funcionalidade'}
-                                                />
-                                            </div>
-                                        </section>
+                
                                     </main>
                                     <footer >
                                         <div className='bg-[#820AD1] py-4'>

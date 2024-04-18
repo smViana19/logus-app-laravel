@@ -3,11 +3,11 @@ function InputPurple({typeInput, placeholderInput, typeBtn, valueBtn,
                                     btnBgColor, btnTextColor, inputBorder}) {
     return(
       
-        <div class="input-group">
+        <div className="input-group">
         <input 
             type={typeInput}
             placeholder={placeholderInput}
-            class="input"
+            className="input"
             id="Email" name="Email"
             autocomplete="off"
             style={{
@@ -19,7 +19,7 @@ function InputPurple({typeInput, placeholderInput, typeBtn, valueBtn,
         <input
             typeBtn={typeBtn}
             value={valueBtn}
-            class="button--submit"
+            className="button--submit"
             style={{
                 backgroundColor: btnBgColor,
                 color: btnTextColor,

@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
 
 //rota da agenda
-Route::get('/dashboard/agenda', function () {
+Route::get('/agenda', function () {
     return Inertia::render('Agenda');
 })->middleware(['auth', 'verified'])->name('agenda');
 

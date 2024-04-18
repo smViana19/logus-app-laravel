@@ -8,6 +8,8 @@ import InputSearch from '@/Components/Inputs/InputSearch';
 import BtnCriarDoc from '@/Components/Buttons/BtnCriarDoc';
 import Filtros from '@/Components/Filtros';
 import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
+import CardStatus from '@/Components/CardsOrContainers/CardStatus';
+import '../../css/Dashboard.css'
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -42,7 +44,7 @@ export default function Authenticated({ user, header, children }) {
                                     Área de Postagens {/* fazer dropdown - resumo slide etc */}
                                 </NavLink>
 
-                              
+
 
                                 <NavLink
                                     borderPage={currentRoute === '/agenda' ? '1px solid black' : 'none'}
@@ -98,6 +100,16 @@ export default function Authenticated({ user, header, children }) {
             </nav>
             {/* -------------------------------------------------------------------------- */}
             <main>
+            <CardStatus 
+                    escola="COTEMIG - Colégio e Faculdade"
+                    anoEscolar="3º Ano do Ensino Médio"
+                    ocupacao="Estudante"
+                    entregues={24}
+                    naoEntregues={2}
+                    media={98.5}
+                    user={{ name: "Sofia Passos" }} //AUTOMATIZAR
+                />
+
                 <div className='custum__div-baner h-64 py-8' >
                     <InputSearch />
                     <p className='
@@ -107,14 +119,18 @@ export default function Authenticated({ user, header, children }) {
                         font-medium
                         text-gray-700'>Crie seu próprio material de estudos</p>
                     <BtnCriarDoc />
-                    <div className='bg-gray-300 flex justify-between mt-16'>
-                        <p className='font-medium px-4 py-2 mx-4 my-2'>Experimente o plano perfeito para você</p>
-                        <button className='font-medium px-4 py-2 mx-4 my-2 rounded-lg bg-gray-400'>Experimentar</button>
 
-                    </div>
                 </div>
 
                 <Filtros />
+
+                <div className='mx-16'>
+                    <h3 className='w-100 pb-2 mt-16
+                    text-gray-700 text-lg font-medium
+                    border-b-2 border-gray-300'>Tarefas Pendentes: </h3>
+
+             
+                </div>
 
                 <div className='mx-16'>
                     <h3 className='w-100 pb-2 mt-16

@@ -1,17 +1,21 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import AuthenticatedLayoutAgenda from '@/Layouts/AuthenticatedLayoutAgenda';
 import { Head } from '@inertiajs/react';
+import '../../css/Dashboard.css'
 
-export default function Agenda({ auth, laravelVersion, phpVersion }) {
+
+export default function Dashboard({ auth }) {
     return (
-        <AuthenticatedLayout
-            user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Agenda</h2>}
-        >
-            <Head title="Agenda" />
-
-            <div className="py-12">
-               
+       
+            <div>
+                <AuthenticatedLayoutAgenda
+                    user={auth.user}
+                    header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Tela Principal</h2>}
+                >
+                    <Head title="Tela Principal" />
+                </AuthenticatedLayoutAgenda>
+                
             </div>
-        </AuthenticatedLayout>
+
+
     );
 }

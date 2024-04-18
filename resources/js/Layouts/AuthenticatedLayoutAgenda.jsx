@@ -10,6 +10,7 @@ import Filtros from '@/Components/Filtros';
 import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
 import CardMaterias from '@/Components/CardsOrContainers/CardMaterias';
 import imgMatematicaCard from '../../img/matematicaCard.jpg'
+import ContainerDiaAtual from '@/Components/CardsOrContainers/ContainerDiaAtual';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -100,43 +101,12 @@ export default function Authenticated({ user, header, children }) {
             </nav>
             {/* -------------------------------------------------------------------------- */}
             <main className=''>
-                <div className='mx-8 mt-4 rounded-lg bg-gray-200'>
-
-                    <div className='flex justify-around pt-8'>
-                        <h1 className='font-base text-lg my-43 border-gray-800 border-2 py-2 px-8 rounded-md'>Área do Professor</h1>
-                        <h1 className='font-base text-lg my-43 border-gray-800 border-2 py-2 px-8 rounded-md'>Área do Aluno</h1>
-                    </div>
-
-                    <div className='grid grid-cols-3 justify-around gap-8 m-8 mt-16'>
-                        <CardMaterias
-                        imgCard={imgMatematicaCard}
-                            materia={"Matemática"}
-                            atividades={"Lista de atividades sobre..."}
-                        />
-                        <CardMaterias
-                            materia={"Português"}
-                            atividades={"Lista de atividades sobre..."}
-                        />
-                        <CardMaterias
-                            materia={"História"}
-                            atividades={"Lista de atividades sobre..."}
-                        />
-                        <CardMaterias
-                        imgCard={imgMatematicaCard}
-                            materia={"Matemática"}
-                            atividades={"Lista de atividades sobre..."}
-                        />
-                        <CardMaterias
-                            materia={"Português"}
-                            atividades={"Lista de atividades sobre..."}
-                        />
-                        <CardMaterias
-                            materia={"História"}
-                            atividades={"Lista de atividades sobre..."}
-                        />
-                    </div>
-
-                </div>
+                <ContainerDiaAtual
+                    diaNum={'24'}
+                    diaText={'Segunda'}
+                    mesAno={'Abril de 2024'}
+                
+                />
 
             </main>
 
