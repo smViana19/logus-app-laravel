@@ -4,7 +4,6 @@ import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
-import InputSearch from '@/Components/Inputs/InputSearch';
 import BtnCriarDoc from '@/Components/Buttons/BtnCriarDoc';
 import Filtros from '@/Components/Filtros';
 import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
@@ -111,7 +110,7 @@ export default function Authenticated({ user, header, children }) {
                 />
 
                 <div className='custum__div-baner h-64 py-8' >
-                    <InputSearch />
+           
                     <p className='
                         text-center 
                         mt-16 
