@@ -1,6 +1,6 @@
 export default function Filtros() {
     return(
-        <div className="flex justify-left mt-32 mx-16">
+        <div className="flex justify-left mx-16">
                 <select name="" id="" className="rounded-lg mx-2 border-2 border-gray-200">
                     <option value="" disabled selected>Ordenar por: </option>
                     <option value="">Populares</option>

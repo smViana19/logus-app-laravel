@@ -9,6 +9,7 @@ import Filtros from '@/Components/Filtros';
 import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
 import CardStatus from '@/Components/CardsOrContainers/CardStatus';
 import '../../css/Dashboard.css'
+import ContainerUrgentes from '@/Components/CardsOrContainers/ContainerUrgentes';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -109,11 +110,13 @@ export default function Authenticated({ user, header, children }) {
                     user={{ name: "Sofia Passos" }} //AUTOMATIZAR
                 />
 
+               
+
                 <div className='custum__div-baner h-64 py-8' >
            
                     <p className='
                         text-center 
-                        mt-16 
+                        mt-8 
                         text-xl 
                         font-medium
                         text-gray-700'>Crie seu próprio material de estudos</p>
@@ -121,15 +124,9 @@ export default function Authenticated({ user, header, children }) {
 
                 </div>
 
+
+                <ContainerUrgentes/>
                 <Filtros />
-
-                <div className='mx-16'>
-                    <h3 className='w-100 pb-2 mt-16
-                    text-gray-700 text-lg font-medium
-                    border-b-2 border-gray-300'>Tarefas Pendentes: </h3>
-
-             
-                </div>
 
                 <div className='mx-16'>
                     <h3 className='w-100 pb-2 mt-16
@@ -149,6 +146,7 @@ export default function Authenticated({ user, header, children }) {
                         <CardMaterial
                             materia={'Português'}
                             data={'12/04/24'}
+                            anoEscolar={'1º Ano do Ensino Médio'}
                             titulo={'Preposições'}
                             colorSVG={'blue'}
 
@@ -166,9 +164,9 @@ export default function Authenticated({ user, header, children }) {
                         <CardMaterial
                             materia={'Matemática'}
                             data={'12/04/24'}
+                            anoEscolar={'3º Ano do Ensino Médio'}
                             titulo={'Área e volume de Poligonos e Piramides'}
                             colorSVG={'red'}
-
                         />
 
 
