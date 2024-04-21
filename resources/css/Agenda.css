@@ -1,0 +1,6 @@
+.custum__card-tarefas{
+    display: grid;
+    grid-template-columns: 2% 48%;
+    margin: 16px auto 0 auto;
+    justify-content: center;
+}

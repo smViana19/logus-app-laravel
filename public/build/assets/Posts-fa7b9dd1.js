@@ -1,4 +1,4 @@
-import{j as e,r as o,d as c,a as m}from"./app-1288521d.js";import{L as x}from"./ApplicationLogo-459fa65e.js";import{D as r}from"./Dropdown-a8b9e958.js";import{N as d}from"./Dashboard-6092d01f.js";import"./transition-411701f2.js";function s({materia:a,atividades:t,imgCard:n}){return e.jsxs("div",{className:`\r
+import{j as e,r as o,d as c,a as m}from"./app-27a85dd5.js";import{L as x}from"./ApplicationLogo-8467248e.js";import{D as r}from"./Dropdown-19fc2470.js";import{N as d}from"./Dashboard-aaf902ab.js";import"./transition-45b6f90b.js";function s({materia:a,atividades:t,imgCard:n}){return e.jsxs("div",{className:`\r
         \r
             border-2 border-[#820AD1]\r
             rounded-lg\r

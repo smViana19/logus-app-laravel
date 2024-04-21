@@ -11,9 +11,13 @@ import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
 import CardMaterias from '@/Components/CardsOrContainers/CardMaterias';
 import imgMatematicaCard from '../../img/matematicaCard.jpg'
 import ContainerDiaAtual from '@/Components/CardsOrContainers/ContainerDiaAtual';
+import Calendar from '@/Components/CardsOrContainers/Calendar';
+import TarefaStatus from '@/Components/TarefaStatus';
+import CardTarefa from '@/Components/CardsOrContainers/CardTarefa';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
+    
 
     // Obtém a rota atual
     const currentRoute = window.location.pathname;
@@ -100,16 +104,23 @@ export default function Authenticated({ user, header, children }) {
                 </div>
             </nav>
             {/* -------------------------------------------------------------------------- */}
-            <main className=''>
+            <main className='bg-white pb-24'>
                 <ContainerDiaAtual
                     diaNum={'24'}
                     diaText={'Segunda'}
                     mesAno={'Abril de 2024'}
-                
                 />
 
-            </main>
+                <Calendar />
+                <TarefaStatus />
+                <CardTarefa />
+                <CardTarefa />
+                <CardTarefa />
+                
+         
 
+            </main>
+        
 
         </div>
     );

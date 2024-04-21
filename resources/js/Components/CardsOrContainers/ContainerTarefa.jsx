@@ -1,4 +1,5 @@
-import '../../../css/Dashboard.css'
+import Checkbox from "../Checkbox";
+
 export default function () {
     return (
         <div className='
@@ -6,9 +7,7 @@ export default function () {
                 pb-2 mt-2 mb-8
                 custum__grid-tarefas gap-4'>
 
-            <div>
-                <input type="checkbox" class="ui-checkbox" />
-            </div>
+            <Checkbox />
 
             <div className="flex flex-col">
                 <span className="text-lg">Atividade de matemática</span>
