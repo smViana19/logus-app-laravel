@@ -1,12 +1,16 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 
 Route::get('/', function () {
+
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('cadastrar'),
@@ -14,6 +18,8 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -25,6 +31,29 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+//rota de teste
+
+Route::middleware(['auth', 'can:aluno'])->group(function () {
+    Route::get('/teste', function() {
+        // Encontre o usuário com ID 1
+        $user = User::find(1);
+
+        // Verifica se o usuário existe
+        if ($user) {
+            // Atribua a permissão de aluno ao usuário
+            $user->assignPermission('aluno');
+
+            // Faça login como o usuário
+            Auth::login($user);
+        } else {
+            // Se o usuário não existir, emita um aviso
+            return "Usuário com ID 1 não encontrado.";
+        }
+
+        return view('teste');
+    });
+});
 
 //rota da agenda
 Route::get('/agenda', function () {
