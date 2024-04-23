@@ -14,10 +14,12 @@ import ContainerDiaAtual from '@/Components/CardsOrContainers/ContainerDiaAtual'
 import Calendar from '@/Components/CardsOrContainers/Calendar';
 import TarefaStatus from '@/Components/TarefaStatus';
 import CardTarefa from '@/Components/CardsOrContainers/CardTarefa';
+import ModalCreateTask from '@/Components/Modal/ModalCreateTask';
+
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
-    
+    const [OpenModalCreateTask, setOpenModalCreateTask] = useState(false)
 
     // Obtém a rota atual
     const currentRoute = window.location.pathname;
@@ -49,12 +51,16 @@ export default function Authenticated({ user, header, children }) {
                                     Área de Postagens {/* fazer dropdown - resumo slide etc */}
                                 </NavLink>
 
-
-
                                 <NavLink
                                     borderPage={currentRoute === '/agenda' ? '1px solid black' : 'none'}
                                     href={route('agenda')} active={route().current('agenda')}>
                                     Agenda
+                                </NavLink>
+
+                                <NavLink
+                                    borderPage={currentRoute === '/pomodoro' ? '1px solid black' : 'none'}
+                                    href={route('pomodoro')} active={route().current('pomodoro')}>
+                                    Método Pomodoro
                                 </NavLink>
                             </div>
 
@@ -116,6 +122,7 @@ export default function Authenticated({ user, header, children }) {
                 <CardTarefa />
                 <CardTarefa />
                 <CardTarefa />
+                <ModalCreateTask isOpen={OpenModalCreateTask} />
                 
          
 

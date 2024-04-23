@@ -44,13 +44,18 @@ export default function Authenticated({ user, header, children }) {
                                     Área de Postagens {/* fazer dropdown - resumo slide etc */}
                                 </NavLink>
 
-
-
                                 <NavLink
                                     borderPage={currentRoute === '/agenda' ? '1px solid black' : 'none'}
                                     href={route('agenda')} active={route().current('agenda')}>
                                     Agenda
                                 </NavLink>
+
+                                <NavLink
+                                    borderPage={currentRoute === '/pomodoro' ? '1px solid black' : 'none'}
+                                    href={route('pomodoro')} active={route().current('pomodoro')}>
+                                    Método Pomodoro
+                                </NavLink>
+                                
                             </div>
 
                         </div>

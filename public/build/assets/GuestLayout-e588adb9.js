@@ -1,4 +1,4 @@
-import{j as e,d as n}from"./app-27a85dd5.js";import{L as r}from"./ApplicationLogo-8467248e.js";function i({children:s}){return e.jsx("div",{className:`min-h-screen 
+import{j as e,d as n}from"./app-0444e7f9.js";import{L as r}from"./ApplicationLogo-cb38d567.js";function i({children:s}){return e.jsx("div",{className:`min-h-screen 
         flex flex-col 
         sm:justify-center 
         items-center pt-6 

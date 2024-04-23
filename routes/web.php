@@ -37,6 +37,12 @@ Route::get('/posts', function () {
     return Inertia::render('Posts');
 })->middleware(['auth', 'verified'])->name('posts');
 
+//rota do método pomodoro
+Route::get('/pomodoro', function () {
+    return Inertia::render('Pomodoro');
+})->middleware(['auth', 'verified'])->name('pomodoro');
+
+
 
 
 

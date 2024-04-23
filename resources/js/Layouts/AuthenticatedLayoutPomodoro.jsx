@@ -4,15 +4,12 @@ import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
-import BtnCriarDoc from '@/Components/Buttons/BtnCriarDoc';
-import Filtros from '@/Components/Filtros';
-import CardMaterial from '@/Components/CardsOrContainers/CardMaterial';
-import CardStatus from '@/Components/CardsOrContainers/CardStatus';
-import '../../css/Dashboard.css'
-import ContainerUrgentes from '@/Components/CardsOrContainers/ContainerUrgentes';
+import CardTarefa from '@/Components/CardsOrContainers/CardTarefa';
+import ContainerTarefa from '@/Components/CardsOrContainers/ContainerTarefa';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
+    const [OpenModalCreateTask, setOpenModalCreateTask] = useState(false)
 
     // Obtém a rota atual
     const currentRoute = window.location.pathname;
@@ -55,7 +52,6 @@ export default function Authenticated({ user, header, children }) {
                                     href={route('pomodoro')} active={route().current('pomodoro')}>
                                     Método Pomodoro
                                 </NavLink>
-
                             </div>
 
                         </div>
@@ -104,82 +100,45 @@ export default function Authenticated({ user, header, children }) {
                 </div>
             </nav>
             {/* -------------------------------------------------------------------------- */}
-            <main>
-            <CardStatus 
-                    escola="COTEMIG - Colégio e Faculdade"
-                    anoEscolar="3º Ano do Ensino Médio"
-                    ocupacao="Estudante"
-                    entregues={24}
-                    naoEntregues={2}
-                    media={98.5}
-                    user={{ name: "Sofia Passos" }} //AUTOMATIZAR
-                />
+            <main className='bg-white pb-24 flex justify-center'>
+            <aside className='float-left'>
+                    <div className='border p-2 rounded-lg flex flex-col w-48'>
+                        <span className='text-base pb-2'>Tempo de foco hoje</span>
+                        <span className='text-[#5A1B8D] font-semibold text-2xl'>0 min</span>
+                    </div>
+                    <div className= 'border p-2 rounded-lg flex flex-col w-48'>
+                        <span>Tarefas</span>
+                        <img src="" alt="" />
+                    </div>
 
-               
-
-                <div className='custum__div-baner h-64 py-8' >
-           
-                    <p className='
-                        text-center 
-                        mt-8 
-                        text-xl 
-                        font-medium
-                        text-gray-700'>Crie seu próprio material de estudos</p>
-                    <BtnCriarDoc />
-
-                </div>
-
-
-                <ContainerUrgentes/>
-                <Filtros />
-
-                <div className='mx-16'>
-                    <h3 className='w-100 pb-2 mt-16
-                    text-gray-700 text-lg font-medium
-                    border-b-2 border-gray-300'>Da sua turma: </h3>
-
-                    <div className='grid grid-cols-4 my-8 gap-4'>
-                        <CardMaterial
-                            materia={'Matemática'}
-                            data={'12/04/24'}
-                            anoEscolar={'1º Ano do Ensino Médio'}
-                            titulo={'Área e volume de Poligonos e Piramides'}
-                            colorSVG={'red'}
-
-                        />
-
-                        <CardMaterial
-                            materia={'Português'}
-                            data={'12/04/24'}
-                            anoEscolar={'1º Ano do Ensino Médio'}
-                            titulo={'Preposições'}
-                            colorSVG={'blue'}
-
-                        />
-
-                        <CardMaterial
-                            materia={'Biologia'}
-                            anoEscolar={'1º Ano do Ensino Médio'}
-                            data={'12/04/24'}
-                            titulo={'Fungos e bactérias'}
-                            colorSVG={'green'}
-
-                        />
-
-                        <CardMaterial
-                            materia={'Matemática'}
-                            data={'12/04/24'}
-                            anoEscolar={'3º Ano do Ensino Médio'}
-                            titulo={'Área e volume de Poligonos e Piramides'}
-                            colorSVG={'red'}
-                        />
-
+                    <div className= 'border p-2 rounded-lg flex flex-col w-48 h-32'>
+                        <span>Estatísticas</span>
 
                     </div>
 
+                    <div className= 'border p-2 rounded-lg flex flex-col w-48'>
+                        <span>Papel de parede</span>
+                    </div>
+                </aside>
+                <div className='w-6/12'>
+                    <button className='bg-[#F0F1F5] rounded-xl  py-1 px-8 mt-4'>Selecione uma tarefa</button>
 
+                    <div>
+                        Cronometro
+                    </div>
                 </div>
+
+                <aside>
+                    <h2 className='text-xl font-semibold text-center my-8'>Tarefas à fazer</h2>
+                    <ContainerTarefa />
+                    <ContainerTarefa />
+                    <ContainerTarefa />
+
+                </aside>
+
+                
             </main>
+
 
 
         </div>
