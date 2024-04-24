@@ -138,3 +138,14 @@
         </div>
     </body>
 </html> --}}
+<body>
+    @can('admin')
+        <h1>Você é admin</h1>
+    @endcan
+
+    @can('aluno')
+        <h1>Você e usuário</h1>
+    @endcan
+
+    <h1>Todos podem acessar</h1>
+</body>
