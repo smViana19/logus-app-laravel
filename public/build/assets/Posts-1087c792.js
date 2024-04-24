@@ -1,4 +1,4 @@
-import{j as e,r as l,d as c,a as m}from"./app-0444e7f9.js";import{L as x}from"./ApplicationLogo-cb38d567.js";import{D as r}from"./Dropdown-ff72be28.js";import{N as i}from"./NavLink-3d12001a.js";/* empty css                  */import"./transition-c7b6f5a4.js";function s({materia:a,atividades:t,imgCard:o}){return e.jsxs("div",{className:`\r
+import{j as e,r as l,d as c,a as m}from"./app-57065181.js";import{L as x}from"./ApplicationLogo-8ed9dade.js";import{D as r}from"./Dropdown-77a3fd6f.js";import{N as i}from"./NavLink-6ea7e384.js";/* empty css                  */import"./transition-04792b49.js";function s({materia:a,atividades:t,imgCard:o}){return e.jsxs("div",{className:`\r
         \r
             border-2 border-[#820AD1]\r
             rounded-lg\r

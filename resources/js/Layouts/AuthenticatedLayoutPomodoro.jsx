@@ -6,6 +6,7 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 import CardTarefa from '@/Components/CardsOrContainers/CardTarefa';
 import ContainerTarefa from '@/Components/CardsOrContainers/ContainerTarefa';
+import CardCronometro from '@/Components/CardsOrContainers/CardCronometro';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -101,7 +102,14 @@ export default function Authenticated({ user, header, children }) {
             </nav>
             {/* -------------------------------------------------------------------------- */}
             <main className='bg-white pb-24 flex justify-center'>
-            <aside className='float-left'>
+           
+                <div className='w-6/12 flex justify-center flex-col'>
+                    <button className='bg-[#F0F1F5] rounded-xl py-1 px-8 mt-4  mx-64'>Selecione uma tarefa</button>
+
+                    <CardCronometro />
+                </div>
+
+                <aside className=''>
                     <div className='border p-2 rounded-lg flex flex-col w-48'>
                         <span className='text-base pb-2'>Tempo de foco hoje</span>
                         <span className='text-[#5A1B8D] font-semibold text-2xl'>0 min</span>
@@ -120,21 +128,8 @@ export default function Authenticated({ user, header, children }) {
                         <span>Papel de parede</span>
                     </div>
                 </aside>
-                <div className='w-6/12'>
-                    <button className='bg-[#F0F1F5] rounded-xl  py-1 px-8 mt-4'>Selecione uma tarefa</button>
 
-                    <div>
-                        Cronometro
-                    </div>
-                </div>
-
-                <aside>
-                    <h2 className='text-xl font-semibold text-center my-8'>Tarefas à fazer</h2>
-                    <ContainerTarefa />
-                    <ContainerTarefa />
-                    <ContainerTarefa />
-
-                </aside>
+                
 
                 
             </main>
